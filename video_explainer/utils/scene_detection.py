@@ -9,18 +9,7 @@ from scenedetect import VideoManager, ContentDetector, SceneManager
 
 def capture_screenshots(video_path, output_dir, scenes, screenshot_interval, fps, frame_count):
     """
-    Capture screenshots from the video at scene changes and regular intervals
-    
-    Args:
-        video_path: Path to the video file
-        output_dir: Directory to save screenshots
-        scenes: Scene boundaries
-        screenshot_interval: Interval (in seconds) between screenshots
-        fps: Frames per second
-        frame_count: Total frame count
-        
-    Returns:
-        list: Screenshot information
+    list: Screenshot information
     """
     # Open video capture
     cap = cv2.VideoCapture(video_path)
@@ -30,7 +19,7 @@ def capture_screenshots(video_path, output_dir, scenes, screenshot_interval, fps
     
     # Add scene change frames
     for scene in scenes:
-        screenshot_frames.add(scene["start_frame"])
+        screenshot_frames.add(scene["start_frame"])``
     
     # Add regular interval frames
     interval_frames = int(fps * screenshot_interval)
